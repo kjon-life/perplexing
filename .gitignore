@@ -17,3 +17,6 @@ log/
 
 # not yet ready for prime time
 CODE_OF_CONDUCT.md
+
+# until we move the env
+env
