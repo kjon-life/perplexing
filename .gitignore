@@ -1,6 +1,7 @@
 /target
 
 # developer notes and presentations
+/slides
 
 # custom files
 custom/
@@ -18,5 +19,5 @@ log/
 # not yet ready for prime time
 CODE_OF_CONDUCT.md
 
-# until we move the env
+# if you are still using env at least don't put it in source control
 env
