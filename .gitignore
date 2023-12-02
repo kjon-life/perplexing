@@ -19,5 +19,5 @@ log/
 # not yet ready for prime time
 CODE_OF_CONDUCT.md
 
-# if you are still using env at least don't put it in source control
+# if you are still using env at least don't put it in source control (we don't put secrets into repositories)
 env
