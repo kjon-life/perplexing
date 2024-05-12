@@ -128,4 +128,5 @@ subject is clear and precise enough that users will know what changed by just lo
 
 ## Credits
 
-We borrowed heavily from other projects, particularly [@ohmyzsh](https://github.com/ohmyzsh/ohmyzsh/blob/master/CONTRIBUTING.md)
+We borrowed heavily from other projects, including:
+* CONTRIBUTING GUIDELINES: [@ohmyzsh](https://github.com/ohmyzsh/ohmyzsh/blob/master/CONTRIBUTING.md)
