@@ -1,6 +1,6 @@
 # CONTRIBUTING GUIDELINES
 
-Ulimately {productname} is a community-driven project. Contribution is necessary, welcome, respected, and appreciated.
+Ideally useful projects become community-driven. Contribution is necessary, welcome, respected, and appreciated.
 
 We do support each other to uphold our [code of conduct](CODE_OF_CONDUCT.md).
 
@@ -9,13 +9,14 @@ In time, efficiency wins when processing issues and pull requests. These guideli
 
 <!-- TOC updateonsave:true depthfrom:2 -->
 
-- [Reporting Issues](#reporting-issues)
-  - [You have a problem](#you-have-a-problem)
-  - [You have a suggestion](#you-have-a-suggestion)
-- [Commit Guidelines](#commit-guidelines)
-  - [Format](#format)
-  - [Style](#style)
-- [Volunteer](#volunteer)
+- [CONTRIBUTING GUIDELINES](#contributing-guidelines)
+  - [Reporting Issues](#reporting-issues)
+    - [You have a problem](#you-have-a-problem)
+  - [Commit Guidelines](#commit-guidelines)
+    - [Format](#format)
+    - [Style](#style)
+  - [Volunteer](#volunteer)
+  - [Credits](#credits)
 
 <!-- /TOC -->
 
@@ -128,5 +129,5 @@ subject is clear and precise enough that users will know what changed by just lo
 
 ## Credits
 
-We borrowed heavily from other projects, including:
+We borrowed from other projects, including:
 * CONTRIBUTING GUIDELINES: [@ohmyzsh](https://github.com/ohmyzsh/ohmyzsh/blob/master/CONTRIBUTING.md)
