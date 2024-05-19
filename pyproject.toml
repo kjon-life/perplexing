@@ -5,7 +5,9 @@ description = "the ZeroToMastery version"
 authors = ["KiloJon <social@kjon.life>"]
 license = "MIT"
 readme = "README.md"
-
+packages = [
+    { include = "llm", from = "src" },
+]
 [tool.poetry.dependencies]
 python = "^3.11"
 langchain = "^0.0.342"
