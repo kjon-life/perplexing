@@ -1,84 +1,31 @@
+LLMs require instructions to provide response. At the moment, an input and an output.
 
-## Strategy & Tactics
-### Provide sufficient clarity and details
-Clear objectives: The more specific and detailed the prompt the more likely a response will be constrained in relevance. 
- 
-### Eliminate negations  
-It seems, like people, LLMs are not great at what *not* to do. 
+Intuitively, by learning to write good instructions, we can learn to derive useful outputs.
 
-### Define roles
+## Empirical integration  
+As the AI hyperbole dissipates, it would be helpful to understand language patterns which can make AI meaningful and relevant in the business of becoming eminently qualified humans. This module delves into foundational, concrete examples which from structured inputs, achieve useful outputs.
 
-### Predefine output format
-Learn how to ask for something specific that is trivial for an LLM to complete. Example, return the response in a dictionary, list, json, with or without diagrams
+We can consider an LLM an inference machine with emergent abilities beyond expectations and training.
 
-### Illustrate  
-Incorporate leonardo.ai (or other engines) to generate the visual imagery which supports the response
+We can think of LLMs as patttern matching machines.
 
-### Provide your own trusted sources
-A reference text, or a functional output example, will significantly improve the quality of response. The general constaints are:
-    * Be selective in choosing the documents to attach
-    * Be directive: Tell the assistant to use that specific document(s)
-    * Be careful: Require the assistant properly cite the specific sections it is reusing or referencing
-    * Be comparative: Ask the assistant to generate multiple responses and compare the results for accuracy and relevance
+Here is a pattern which we can provide.
 
-### Calrify vs rewrite?
+## Credits
 
-### RTF
-The T is for tasks. Like humans, the more specific and simple the task the more likely the results will be predictable and complete...
-#### Add structure first
-Break down a task into steps and sequences. **The sequence is important.**
+This project was inspired by and incorporates code from the following repositories:
 
-#### Clarify intent
-
-#### Require effective summary
-Recursion is your friend, especially for longer inputs. Summary of a summary of summaries, compared to an alternative solution. The general principles:
-* Focus on one thing at a time
-* Define an order or sequence
-* Smaller focused prompts are more cost-effective?
-
-### Few shot prompting
-* Do this:
-* Example output:
-* Followup prompt:
-
-### Establish a baseline
-OpenAI describes this as giving the model time to think.
-Whether directing the assistant to develop its own solution first, or ...
-
-### Define the external tools
-Consider using directives to validate a solution in a specific language or an API
-
-### Testing
-1. System directives to compare outputs to factual sources
-2. Pre-determined standards esp re factual information
-3. Evaluation process for sensitivity
-
-### Priming
-* semantic
-* repetition
-* anti-priming
-> “Not the least but the m___.
-Not the guest but the ____.
-A name for a spirit is a ____.
-Cooking food or coffee beans is called a ____.
-What you put in a toaster is called ____.”
+- [nasa-petal bidara](https://github.com/nasa-petal/bidara.git) [^1]  
 
 
 
-## TOOLCHAIN  
-### Branch Main  
-Jupyter Notebooks
-* Use personas, delimiters, step-by-step instructions, and other tactics to profoundly influence the quality of assistant output
-* Elevate the essential prompt-response workflow to reduce or eliminate hallucinations and inaccuracies
+## License
 
-### Branch ZeroToMastery
-Python, OpenAI, LangChain, Vector Embeddings, Pinecone.  
-* chatbots  
-* question answering system  
-* summarization tools  
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-### Branch PellucidController
-Python, pplx-api, LangChain, Vector Embeddings, Pinecone.  
-[pplx-api](https://blog.perplexity.ai/blog/introducing-pplx-api)  
+___
+[^1]:  BIDARA  
+    A design and research assistant. What makes this interesting is the [System Prompt](https://github.com/nasa-petal/bidara) 
 
-### Credits  
+The web version is under active development and currently has more features than the Discord version.
+[^2]:  :rocket: [Try the web version](https://nasa-petal.github.io/bidara-deep-chat/) &nbsp; :octocat: [See the repo](https://github.com/nasa-petal/bidara-deep-chat/)
