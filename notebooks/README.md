@@ -1,5 +1,7 @@
 
-## Strategy & Tactics
+## Strategy & Tactics  
+When will AI "take your job"? Probably never. But that person who is AI-augmented is going to make you look like you are standing still. These notebooks are baby steps into the articulations which will let AI augment your reality. 
+
 ### Provide sufficient clarity and details
 Clear objectives: The more specific and detailed the prompt the more likely a response will be constrained in relevance. 
  
@@ -7,6 +9,7 @@ Clear objectives: The more specific and detailed the prompt the more likely a re
 It seems, like people, LLMs are not great at what *not* to do. 
 
 ### Define roles
+An LLM needs help. Be clear about its role so it can focus on being helpful for you.
 
 ### Predefine output format
 Learn how to ask for something specific that is trivial for an LLM to complete. Example, return the response in a dictionary, list, json, with or without diagrams
@@ -21,7 +24,8 @@ A reference text, or a functional output example, will significantly improve the
     * Be careful: Require the assistant properly cite the specific sections it is reusing or referencing
     * Be comparative: Ask the assistant to generate multiple responses and compare the results for accuracy and relevance
 
-### Calrify vs rewrite?
+### Calrify vs rewrite?  
+
 
 ### RTF
 The T is for tasks. Like humans, the more specific and simple the task the more likely the results will be predictable and complete...
