@@ -1,4 +1,4 @@
-LLMs require instructions to provide response. At the moment, an input and an output.
+LLMs provide an interface for instructions to provide response. At the moment, an input and an output.
 
 Intuitively, by learning to write good instructions, we can learn to derive useful outputs.
 

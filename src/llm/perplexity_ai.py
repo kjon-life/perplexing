@@ -1,37 +1,31 @@
-from openai import OpenAI
+import requests
 
-YOUR_API_KEY = "INSERT API KEY HERE"
+url = "https://api.perplexity.ai/chat/completions"
 
-messages = [
-    {
-        "role": "system",
-        "content": (
-            "You are an artificial intelligence assistant and you need to "
-            "engage in a helpful, detailed, polite conversation with a user."
-        ),
-    },
-    {
-        "role": "user",
-        "content": (
-            "How many stars are in the universe?"
-        ),
-    },
-]
+payload = {
+    "model": "mixtral-8x7b-instruct",
+    "messages": [
+        {
+            "role": "system",
+            "content": "Be precise and concise."
+        },
+        {
+            "role": "user",
+            "content": "How many stars are there in our galaxy?"
+        }
+    ],
+    "max_tokens": 4000,
+    "temperature": 0.5,
+    "top_p": 1,
+    "return_citations": False,
+    "stream": False,
+    "frequency_penalty": 1.5
+}
+headers = {
+    "accept": "application/json",
+    "content-type": "application/json"
+}
 
-client = OpenAI(api_key=YOUR_API_KEY, base_url="https://api.perplexity.ai")
+response = requests.post(url, json=payload, headers=headers)
 
-# chat completion without streaming
-response = client.chat.completions.create(
-    model="llama-3-sonar-large-32k-online",
-    messages=messages,
-)
-print(response)
-
-# chat completion with streaming
-response_stream = client.chat.completions.create(
-    model="llama-3-sonar-large-32k-online",
-    messages=messages,
-    stream=True,
-)
-for response in response_stream:
-    print(response)
+print(response.text)
