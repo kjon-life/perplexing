@@ -3,7 +3,7 @@
 When will AI "take your job"? Probably never. But that person who is AI-augmented is going to make you look like you are standing still. These notebooks are baby steps into the articulations which will let AI augment your reality. 
 
 ### Provide sufficient clarity and details
-Clear objectives: The more specific and detailed the prompt the more likely a response will be constrained in relevance. 
+Clear objectives: The more specific and detailed the prompt the more likely a response will be constrained in relevance. This is known as __context__.
  
 ### Eliminate negations  
 It seems, like people, LLMs are not great at what *not* to do. 
@@ -24,7 +24,10 @@ A reference text, or a functional output example, will significantly improve the
     * Be careful: Require the assistant properly cite the specific sections it is reusing or referencing
     * Be comparative: Ask the assistant to generate multiple responses and compare the results for accuracy and relevance
 
-### Calrify vs rewrite?  
+### Clarify vs rewrite?  
+
+## Token Limits
+It's important to know the token limit we work within, for impact upon coherance
 
 
 ### RTF
@@ -67,7 +70,8 @@ A name for a spirit is a ____.
 Cooking food or coffee beans is called a ____.
 What you put in a toaster is called ____.”
 
-
+### Lost in the Middle
+*  Too much context, esp in the middle can be detrimental to accuracy
 
 ## TOOLCHAIN  
 ### Branch Main  
