@@ -8,11 +8,7 @@ Clear objectives: The more specific and detailed the prompt the more likely a re
 ### Eliminate negations  
 It seems, like people, LLMs are not great at what *not* to do. 
 
-### Define roles
-An LLM needs help. Be clear about its role so it can focus on being helpful for you.
 
-### Predefine output format
-Learn how to ask for something specific that is trivial for an LLM to complete. Example, return the response in a dictionary, list, json, with or without diagrams
 
 ### Illustrate  
 Incorporate leonardo.ai (or other engines) to generate the visual imagery which supports the response
@@ -25,19 +21,24 @@ A reference text, or a functional output example, will significantly improve the
     * Be comparative: Ask the assistant to generate multiple responses and compare the results for accuracy and relevance
 
 ### Clarify vs rewrite?  
+Keep in mind that, in general, your current prompt and prior prompts will be resubmitted, contributing to your token use. 
 
-## Token Limits
-It's important to know the token limit we work within, for impact upon coherance
+### Token Limits
+Token use adds up. It's important to know the token limit we work within, for impact upon coherance. See also, `lost in the middle`. 
 
 
 ### RTF
+#### Define roles
+An LLM needs help. Be clear about its role so it can focus on being helpful for you. The role should be as simple as it needs to be relevant the desired focus and complexity of the desired output
+#### Add tasks first
 The T is for tasks. Like humans, the more specific and simple the task the more likely the results will be predictable and complete...
-#### Add structure first
-Break down a task into steps and sequences. **The sequence is important.**
+Break down a task into steps and sequences. **The sequence is important.**  
+#### Ask for the format  
+Learn how to ask for something specific that is trivial for an LLM to complete. Example, return the response in a dictionary, list, json, with or without diagrams
 
 #### Clarify intent
 
-#### Require effective summary
+### Require effective summary
 Recursion is your friend, especially for longer inputs. Summary of a summary of summaries, compared to an alternative solution. The general principles:
 * Focus on one thing at a time
 * Define an order or sequence
@@ -72,6 +73,47 @@ What you put in a toaster is called ____.”
 
 ### Lost in the Middle
 *  Too much context, esp in the middle can be detrimental to accuracy
+* the most important data should be at the beginning or the end of the prompt
+* focus on how much context is strictly necessary  
+
+### In six months
+* None of this may be relevant in six months
+
+## Fundamentals & Setup
+### Delimiters provide structure  
+```
+===
+'''
+###
+***
+<data> </data>
+```  
+Structured data provide patterns, especially for larger or more complex prompts; It reduces the surface of possibilities with punctuation
+### It seems a solution
+Is the solution pre-supposed in the prompt? That's always counter-productive.
+
+### Zero-Shot
+Simple task, no training nor exemplars
+### Two-Shot
+Provide an example (shot)
+### Few-Shot  
+Provide a few examples
+```
+<examples>
+Something specific that might serve as an example
+
+Something else specific that might serve as an example
+
+</example>
+
+```
+> but do accurate shots (demos) really matter? probably not (source)  
+
+## Chain-of-Thought
+If provided superior chain of thought, model output improves. If required to print out a chain-of-thought, model output actually improves. Seems relatively complex, but perhaps, like many things in nature, the core algorythm is quite simple?
+
+### Zero-shot-CoT
+Basically, add "Let's proceed step-by-step"
 
 ## TOOLCHAIN  
 ### Branch Main  
@@ -90,3 +132,7 @@ Python, pplx-api, LangChain, Vector Embeddings, Pinecone.
 [pplx-api](https://blog.perplexity.ai/blog/introducing-pplx-api)  
 
 ### Credits  
+
+### Papers  
+[Language Models are Few-Shot Learners](source.not.found)  
+[Rethinking the Role of Demonstration](source.not.found)
