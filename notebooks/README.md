@@ -1,6 +1,6 @@
 
 ## Strategy & Tactics  
-When will AI "take your job"? Probably never. But that person who is AI-augmented is going to make you look like you are standing still. These notebooks are baby steps into the articulations which will let AI augment your reality. 
+When will AI "take your job"? Probably never. But that person who is AI-augmented is going to make you look like you are standing still. These notebooks are progress into the articulations which will let AI augment your reality. 
 
 ### Provide sufficient clarity and details
 Clear objectives: The more specific and detailed the prompt the more likely a response will be constrained in relevance. This is known as __context__.
@@ -78,6 +78,21 @@ What you put in a toaster is called ____.”
 
 ### In six months
 * None of this may be relevant in six months
+
+### Pipes  
+Control the boundary message:
+#### Length is fuzzy  
+"Write a 100 token or 100 word output" will not be reliable  
+There are ways to create the outline, then create more complex outputs sequentially.
+Ask for the max tokens if it's not obviously specified  
+#### Formats are effortless
+A consistent efficiency can be found by getting the models to produce the reliable output in a specific format suited to your needs.
+- Why create an Excel file if the model is efficent in doing it?
+- Why restructure for semantic HTML if a model is far faster than a human?
+- Have the model create diagrams in Mermaid?
+#### Jailbreaking  
+[Do Anything Now](chat.imsys.org) and Pliny the Prompter  
+![](images/2024-06-20-22-17-18.png)  
 
 ## Fundamentals & Setup
 ### Delimiters provide structure  
