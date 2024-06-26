@@ -93,6 +93,10 @@ A consistent efficiency can be found by getting the models to produce the reliab
 #### Jailbreaking  
 [Do Anything Now](chat.imsys.org) and Pliny the Prompter  
 ![](images/2024-06-20-22-17-18.png)  
+#### Prompt injection  
+- Add some prompt in an image; See what (doesn't) happen...  
+
+
 
 ## Fundamentals & Setup
 ### Delimiters provide structure  
@@ -129,6 +133,18 @@ If provided superior chain of thought, model output improves. If required to pri
 
 ### Zero-shot-CoT
 Basically, add "Let's proceed step-by-step"
+
+### Top P
+Diversity via nucleus sampling; Or when top p is lowered we reduce the scope of  tokens (only consider some percentage of most likely tokens)
+
+### Frequency and Presence penalties  
+Simply reduces likelhood of repetions; Really, the model could spool into repetitions if variability is not enforced
+
+### Stop Sequences  
+A rather cludgy attempt to get the model to just stop generating tokens; I wonder how it could be used
+
+# Fundamentals
+> Standard Prompt:  Consists of only a question or an instruction. Premise: Like a human. The answer depends on your ask. If
 
 ## TOOLCHAIN  
 ### Branch Main  
