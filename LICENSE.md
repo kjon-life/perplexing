@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2022-2023 k jon and contributors (https://github.com/kjon-life/zero2prodperplexing/graphs/contributors)
+Copyright (c) 2022-2023 k jon and contributors (https://github.com/kjon-life/perplexing/graphs/contributors)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
