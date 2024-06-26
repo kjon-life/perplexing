@@ -21,7 +21,7 @@ This project was inspired by and incorporates code from the following repositori
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more details.
 
 ___
 [^1]:  BIDARA  
