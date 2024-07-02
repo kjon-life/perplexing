@@ -131,6 +131,9 @@ celerybeat-schedule
 # node stuff
 node_modules
 
-# Poetry specifics
-poetry.lock
+# Poetry specific
+#--contains dependencies and configuration
+# pyproject.toml 
+#--include (disable) to ensure reproducibility
+# poetry.lock
 

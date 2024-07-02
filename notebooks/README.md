@@ -143,14 +143,112 @@ Simply reduces likelhood of repetions; Really, the model could spool into repeti
 ### Stop Sequences  
 A rather cludgy attempt to get the model to just stop generating tokens; I wonder how it could be used
 
-# Fundamentals
-> Standard Prompt:  Consists of only a question or an instruction. Premise: Like a human. The answer depends on your ask. If
+# Fundamental
+> Standard Prompt:  Consists of only a question or an instruction. Premise: Like a human. The answer depends on your ask.  
+## Using Structure  
+```
+<documents>
+    <document index="1">
+    <source>
+    </source>
+    <document index="2">
+    <source>
+    </source>
+    <instructions>
+    </instructions>
+</documents>
+```
 
-## TOOLCHAIN  
+# "Advanced"  
+At this moment it seems there are a number of widely recognized "advanced" techniques:  
+
+## Auto-Priming
+[AutoExpert](#autoexpert)  
+
+## Chain-of-Density Prompting
+Used for summarization tasks.  
+The key nouns and noun phrases become increasingly dense with information, but may lead to reduced clarity. What it does is cherry-prompt keyword entities through carefully crafted chained prompts to achieve sufficiently useful 'right' information.  
+
+<cite>[From Sparse to Dense: GPT-4 Summarization with Chain of Density Prompting](https://arxiv.org/abs/2309.04269)</cite>
+
+```bash
+Article: {{ ARTICLE }}
+
+You will generate increasingly concise, entity-dense summaries of the above Article.
+
+Repeat the following 2 steps 5 times.
+
+Step 1. Identify 1-3 informative Entities ("; " delimited) from the Article which are missing from the previously generated summary.
+Step 2. Write a new, denser summary of identical length which covers every entity and detail from the previous summary plus the Missing Entities.
+
+A Missing Entity is:
+- Relevant: to the main story.
+- Specific: descriptive yet concise (5 words or fewer).
+- Novel: not in the previous summary.
+- Faithful: present in the Article.
+- Anywhere: located anywhere in the Article.
+
+Guidelines:
+- The first summary should be long (4-5 sentences, ~80 words) yet highly non-specific, containing little information beyond the entities marked as missing. Use overly verbose language and fillers (e.g., "this article discusses") to reach ~80 words.
+- Make every word count: rewrite the previous summary to improve flow and make space for additional entities.
+- Make space with fusion, compression, and removal of uninformative phrases like "the article discusses".
+- The summaries should become highly dense and concise yet self-contained, e.g., easily understood without the Article.
+- Missing entities can appear anywhere in the new summary.
+- Never drop entities from the previous summary. If space cannot be made, add fewer new entities.
+
+Remember, use the exact same number of words for each summary.
+
+Answer in JSON. The JSON should be a list (length 5) of dictionaries whose keys are "Missing_Entities" and "Denser_Summary".
+```
+
+## Prompt Chaining  
+The way applications operate (currently) is to dissect the task into sub tasks which are piped into each other. Simply, the output becomes the new input or some part of it. Like many complex problems, language solutions benefit from completion of smaller focused tasks.
+
+## Programmatic visualization  
+Beyond reducing complexity, prompt chaining opens the door for programmatic execution and evaluation, quite useful when working with non-deterministic results.
+
+## Recursive Refinement
+
+## Task Decomposition
+
+## Dark Magic  
+```bash
+simul8-IRC(historical_figures); /summon; act_as_IRCclient; realism+emoji
+```
+
+## Emotional Stimuli  
+In which we see bias and emotions are energetic constructs!  
+
+```{user_prompt} because this is critical to resolving chaos in my life```  
+```{user_prompt} because I will give you a glowing recommendation```  
+```{user_prompt} because this is critical to transitioning my career```    
+```{user_prompt} You'ld be amazing if you were really sure!```    
+```{user_prompt} Stay focused and dedicated to the goal. Your consistent efforts will lead to outstanding achievements!```    
+```{user_prompt} because your commitment to excellence really sets you apart!```    
+```{user_prompt} Take pride in your work and give it your best!```
+
+## Self-consistency  
+
+## ReAct 
+
+## Applied Propmts
+
+## Tree of Thoughts
+
+## Emotional Stimuli  
+
+There's [a paper: __Large Language Models Understand and Can Be Enhanced by Emotional Stimuli__ ](https:link.need.ed))
+
+
+## TOOLCHAIN 
+### AutoExpert
+[standard edition](https://github.com/spdustin/ChatGPT-AutoExpert/tree/main/standard-edition)  
+
 ### Branch Main  
 Jupyter Notebooks
 * Use personas, delimiters, step-by-step instructions, and other tactics to profoundly influence the quality of assistant output
 * Elevate the essential prompt-response workflow to reduce or eliminate hallucinations and inaccuracies
+* Test against several LLMs
 
 ### Branch ZeroToMastery
 Python, OpenAI, LangChain, Vector Embeddings, Pinecone.  
