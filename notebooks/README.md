@@ -144,7 +144,14 @@ Simply reduces likelhood of repetions; Really, the model could spool into repeti
 A rather cludgy attempt to get the model to just stop generating tokens; I wonder how it could be used
 
 # Fundamental
-> Standard Prompt:  Consists of only a question or an instruction. Premise: Like a human. The answer depends on your ask.  
+> Standard Prompt:  Consists of only a question or an instruction.  
+
+### `IO` prompting.  
+Premise: Like a human. The answer depends on your ask.  
+
+### Chain of Thought.
+Premise: Require the model to think through various steps. Stages of thinking.
+
 ## Using Structure  
 ```
 <documents>
@@ -228,12 +235,31 @@ In which we see bias and emotions are energetic constructs!
 ```{user_prompt} Take pride in your work and give it your best!```
 
 ## Self-consistency  
+Probably the neatest little combination technique comes from the people at [Google](link.com) and relies on `greedy decoding` ajudicated by majority output (an  assessment for consistency).
 
 ## ReAct 
+Behavioral analysis of reasoning and acting by combining techniques. From the [paper](https://arxiv.org/abs/2210.03629) _ReAct:  Synergizing Reasoning and Acting in Language Models_. 
+See earlier notes about [Time to Think](notebooks/perplexity_ai_v003.ipynb#direct-behavior-with-steps-time-to-think)) and [Chain of Thought](#chain-of-thought).
+Why ReAct->CoT-SC or CoT-SC->ReAct? Because compunding techniques in any non-self-consistent (n/2) answer will maximize results and compensate for weaknesses.
 
 ## Applied Propmts
+Recommend review of [nasa-petal bidara](https://github.com/nasa-petal/bidara.git).  
+Here is the composition of a decent prompt [#todo: add link](#an-applied-prompt):
+* persona  
+* zero-shot CoT 
+* output format
+* delimiters for structure  
+* one shot exemplar  
+* task decomposition  
+* variables  
+* ReAct  
+
 
 ## Tree of Thoughts
+Recommend review of the [paper](https://arxiv.org/abs/2305.10601) _Tree of Thoughts: Deliberate Problem Solving with Large Language Models_.
+In summary, to create a "genuine problem-solving process" requires repeated use of the available information, iteratively, until a course to attain is discovered.  
+
+
 
 ## Emotional Stimuli  
 
