@@ -137,3 +137,5 @@ node_modules
 #--include (disable) to ensure reproducibility
 # poetry.lock
 
+# detect-secrets
+.secrets.baseline
