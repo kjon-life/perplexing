@@ -258,6 +258,7 @@ Here is the composition of a decent prompt [#todo: add link](#an-applied-prompt)
 ## Tree of Thoughts
 Recommend review of the [paper](https://arxiv.org/abs/2305.10601) _Tree of Thoughts: Deliberate Problem Solving with Large Language Models_.
 In summary, to create a "genuine problem-solving process" requires repeated use of the available information, iteratively, until a course to attain is discovered.  
+An [implementation](https://github.com/princeton-nlp/tree-of-thought-llm) 
 
 
 
@@ -269,6 +270,12 @@ There's [a paper: __Large Language Models Understand and Can Be Enhanced by Emot
 ## TOOLCHAIN 
 ### AutoExpert
 [standard edition](https://github.com/spdustin/ChatGPT-AutoExpert/tree/main/standard-edition)  
+
+### Models  
+Available models for OpenAI-compatible services:  
+2024-07-04 2023 HRS  [Chinese Performance vs. API Price](https://www.deepseek.com/) discovered via [zed](https://zed.dev/releases/stable/0.142.4)  
+Jun 9, 2024 12:00 AM (UTC)  [Claude API](https://console.anthropic.com/dashboard) Builder Plan   
+NOVEMBER 5, 2023++  [Perplexity PRO Library](https://www.perplexity.ai/library)  
 
 ### Branch Main  
 Jupyter Notebooks
@@ -291,3 +298,4 @@ Python, pplx-api, LangChain, Vector Embeddings, Pinecone.
 ### Papers  
 [Language Models are Few-Shot Learners](source.not.found)  
 [Rethinking the Role of Demonstration](source.not.found)
+
