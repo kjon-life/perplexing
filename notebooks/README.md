@@ -267,6 +267,10 @@ An [implementation](https://github.com/princeton-nlp/tree-of-thought-llm)
 There's [a paper: __Large Language Models Understand and Can Be Enhanced by Emotional Stimuli__ ](https:link.need.ed))
 
 
+---
+test detect-secrets  
+fake_secret = "abcdefghijklmnop"
+
 ## TOOLCHAIN 
 ### AutoExpert
 [standard edition](https://github.com/spdustin/ChatGPT-AutoExpert/tree/main/standard-edition)  
