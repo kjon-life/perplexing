@@ -260,7 +260,7 @@ Recommend review of the [paper](https://arxiv.org/abs/2305.10601) _Tree of Thoug
 In summary, to create a "genuine problem-solving process" requires repeated use of the available information, iteratively, until a course to attain is discovered.  
 An [implementation](https://github.com/princeton-nlp/tree-of-thought-llm) 
 
-
+[Using Tree-of-Thought Prompting to boost ChatGPT"s reasoning](https://github.com/dave1010/tree-of-thought-prompting) is a good read with some rabbit holes which go back to the current sources.
 
 ## Emotional Stimuli  
 
