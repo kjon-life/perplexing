@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Parse command-line arguments and execute .ipynb notebook search.
 
@@ -18,14 +19,18 @@ Prints:
 import os
 import nbformat
 import argparse
+from typing import Tuple, Optional
 
-def search_notebooks(directory, cell_id):
+from tqdm import tqdm
+
+
+def search_notebooks(directory: str, cell_id: str) -> Tuple[Optional[str], Optional[int]]:
     """
     Search Jupyter notebooks in a directory for a specific cell ID.
 
     This function recursively traverses the given directory and its subdirectories,
     looking for Jupyter notebook files (.ipynb). It searches each notebook for a cell
-    with the specified cell ID in its metadata.
+    with the specified cell ID in its metadata. It includes a progress indicator.
 
     Args:
         directory (str): The path to the directory to search.
