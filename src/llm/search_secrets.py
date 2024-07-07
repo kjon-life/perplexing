@@ -52,15 +52,21 @@ def search_notebooks(directory: str, cell_id: str) -> Tuple[Optional[str], Optio
         ... else:
         ...     print("Cell ID not found")
     """
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            if file.endswith(".ipynb"):
-                notebook_path = os.path.join(root, file)
-                with open(notebook_path, 'r', encoding='utf-8') as f:
-                    notebook = nbformat.read(f, as_version=4)
-                    for cell in notebook.cells:
-                        if 'id' in cell.metadata and cell.metadata['id'] == cell_id:
-                            return notebook_path, notebook.cells.index(cell)
+    try:
+        for root, dirs, files in os.walk(directory):
+            for file in files:
+                if file.endswith(".ipynb"):
+                    notebook_path = os.path.join(root, file)
+                    try:
+                        with open(notebook_path, 'r', encoding='utf-8') as f:
+                            notebook = nbformat.read(f, as_version=4)
+                        for cell in notebook.cells:
+                            if 'id' in cell.metadata and cell.metadata['id'] == cell_id:
+                                return notebook_path, notebook.cells.index(cell)
+                    except (IOError, nbformat.reader.NotJSONError) as e:
+                        print(f"Error reading {notebook_path}: {e}")
+    except OSError as e:
+        print(f"Error accessing directory {directory}: {e}")
     return None, None
 
 def main():
