@@ -19,12 +19,11 @@ Prints:
 import os
 import nbformat
 import argparse
-from typing import Tuple, Optional
-
+import logging
 from tqdm import tqdm
 
 
-def search_notebooks(directory: str, cell_id: str) -> Tuple[Optional[str], Optional[int]]:
+def search_notebooks(directory: str, cell_id: str) -> tuple[str | None, int | None]:
     """
     Search Jupyter notebooks in a directory for a specific cell ID.
 
