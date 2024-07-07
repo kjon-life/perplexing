@@ -18,6 +18,9 @@ anthropic = "^0.28.0"
 pygame = "^2.5.2"
 nbformat = "^5.10.4"
 argparse = "^1.4.0"
+logging = "^0.4.9.6"
+tqdm = "^4.66.4"
+notebook = "^7.2.1"
 
 
 [tool.poetry.group.dev.dependencies]
